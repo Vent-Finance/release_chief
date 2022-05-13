@@ -3,11 +3,9 @@ const semanticRelease = require('semantic-release')
 
 const run = async () => {
   try {
-    const publish = core.getInput('dryRun')
-    // const config = await fs.readFile('./.releaserc.yml', 'utf8')
-    // console.log(parse(config))
+    const dryRun = core.getInput('dryRun')
     const result = await semanticRelease({
-      dryRun: !publish
+      dryRun: String(dryRun) === 'true'
     })
 
     if (!result) {
@@ -15,7 +13,7 @@ const run = async () => {
     }
 
     const { nextRelease } = result
-    core.setOutput('version', nextRelease)
+    core.setOutput('version', nextRelease.version)
   } catch (e) {
     core.setFailed(e.message)
   }

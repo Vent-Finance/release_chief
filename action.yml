@@ -1,4 +1,8 @@
-name: 'Release manager'
+name: 'Release chief'
+description: A Github Action for creating branch
+branding:
+  color: yellow
+  icon: arrow-up
 inputs:
   dryRun:
     description: If true will only calculate release version without publishing
