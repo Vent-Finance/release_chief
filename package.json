@@ -1,23 +1,25 @@
 {
-  "name": "release_manager",
+  "name": "release_chief",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "lint": "eslint ./ --ext .js"
+    "lint": "eslint ./ --ext .js",
+    "build": "ncc build index.js --license licenses.txt"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vent-Finance/release_manager.git"
+    "url": "git+https://github.com/Vent-Finance/release_chief.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Vent-Finance/release_manager/issues"
+    "url": "https://github.com/Vent-Finance/release_chief/issues"
   },
-  "homepage": "https://github.com/Vent-Finance/release_manager#readme",
+  "homepage": "https://github.com/Vent-Finance/release_chief#readme",
   "devDependencies": {
+    "@vercel/ncc": "^0.33.4",
     "eslint": "^8.15.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
