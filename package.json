@@ -1,0 +1,33 @@
+{
+  "name": "release_manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "eslint ./ --ext .js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vent-Finance/release_manager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vent-Finance/release_manager/issues"
+  },
+  "homepage": "https://github.com/Vent-Finance/release_manager#readme",
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "semantic-release": "^19.0.2"
+  },
+  "dependencies": {
+    "@actions/core": "^1.8.0",
+    "@actions/github": "^5.0.1",
+    "conventional-changelog-conventionalcommits": "^4.6.3"
+  }
+}

@@ -1,0 +1,12 @@
+name: 'Release manager'
+inputs:
+  dryRun:
+    description: If true will only calculate release version without publishing
+    required: false
+    default: false
+runs:
+  using: 'node16'
+  main: 'index.js'
+outputs:
+  version:
+    description: Semantic release version of release
