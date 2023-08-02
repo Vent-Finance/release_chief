@@ -14,3 +14,11 @@ runs:
 outputs:
   version:
     description: Semantic release version of release
+  url:
+    description: Last release github url
+  prevVersion:
+    description: Previews release version
+  type:
+    description: Release type (patch, minor, major)
+  notes:
+    description: The release notes

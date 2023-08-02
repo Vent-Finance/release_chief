@@ -12,8 +12,14 @@ const run = async () => {
       throw Error('Creating release failed')
     }
 
-    const { nextRelease } = result
+    const { nextRelease, releases, lastRelease } = result
+    const url = releases.find((release) => release.version === nextRelease.version)?.url
+
+    core.setOutput('prevVersion', lastRelease?.version || 0)
     core.setOutput('version', nextRelease.version)
+    core.setOutput('url', url)
+    core.setOutput('type', nextRelease.type)
+    core.setOutput('notes', nextRelease.notes)
   } catch (e) {
     core.setFailed(e.message)
   }
